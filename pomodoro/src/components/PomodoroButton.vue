@@ -40,6 +40,7 @@ export default {
                     this.isPauseDisabled = false;
                     this.isStopDisabled=true;
                     this.$emit("stop");
+                    this.$emit("pause");
                     break;
             }
         },

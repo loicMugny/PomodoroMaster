@@ -1,17 +1,19 @@
 <template>
   <div id="app">
     <pomodoro v-on:apiChange="ReEmitApiChange" class="component"></pomodoro>
-    <!-- <cat-a-p-i class="component"></cat-a-p-i> -->
+    <cat-a-p-i class="component"></cat-a-p-i>
   </div>
 </template>
 
 <script>
 import Pomodoro from './components/Pomodoro.vue'
+import CatAPI from './components/CatApi.vue'
 
 export default {
   name: 'app',
   components: {
-    Pomodoro
+    Pomodoro,
+    CatAPI
   },
   methods:{
     // ReEmit the event to change the cat with the api

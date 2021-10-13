@@ -2,7 +2,7 @@
   <div>
       <label ref="clock"></label><br/>
       <!-- Change the label state -->
-      <label>{{ this.WorkingState ? "WORK!" : "REST!" }}</label>
+      <label>{{WorkingState ? "WORK!" : "REST!" }}</label>
   </div>
 </template>
 
@@ -17,11 +17,11 @@ export default {
         RestCount: 0,
         Minutes: 0,
         Seconds: -1,
-        WorkMinutes: 25,
+        WorkMinutes: 1,
         WorkSeconds: 0,
         RestMinutes: 5,
         RestSeconds: 0,
-        ResetMinutes: 25,
+        ResetMinutes: 1,
         ResetSeconds: 0
       }
     },
@@ -32,16 +32,19 @@ export default {
           if(this.Seconds == -1){
             this.work()
           }
+          this.WorkingState = true;
       },
       // Pause the timer
       'pause': function(){
           this.Active = false
+          this.WorkingState = false;
       },
       // Set the work timer
       'work': function() {
         this.Minutes = this.WorkMinutes
         this.Seconds = this.WorkSeconds
         this.WorkingState = true
+        console.log(this.WorkingState);
       },
       // Set the rest timer and each 4 pomodori cycle change the rest
       'rest': function(){
