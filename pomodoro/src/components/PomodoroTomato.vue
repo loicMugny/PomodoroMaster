@@ -1,25 +1,20 @@
 <template>
   <div>
-    <img id="img" class="tomato" alt="Tomato" src="../assets/tomato.jpg">
-    <canvas id="canvas" width="400" height="400"></canvas>
+    <img id="img" class="tomato" alt="Tomato" src="../assets/tomato.png">
   </div>
 </template>
 
 <style>
 
+div{
+  margin : auto;
+}
+
 .tomato{
   width: auto;
   height: 45vh;
-  /*animation: grayInLoad 2s infinite;
-  -webkit-animation-direction: alternate-reverse;
-}
-@-webkit-keyframes grayInLoad {
-  from {
-    filter: grayscale(0%);
-  }
-  to {
-    filter: grayscale(100%);
-  }
+  animation: grayInLoad 2s infinite;
+  animation-direction: alternate-reverse;
 }
 @keyframes grayInLoad {
   from {
@@ -27,6 +22,6 @@
   }
   to {
     filter: grayscale(100%);
-  }*/
+  }
 }
 </style>

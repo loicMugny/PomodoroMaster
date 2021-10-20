@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <pomodoro v-on:apiChange="ReEmitApiChange" class="component"></pomodoro>
-    <cat-a-p-i class="component"></cat-a-p-i>
+    <cat-a-p-i v-on:apiChange="ReEmitApiChange" class="component"></cat-a-p-i>
   </div>
 </template>
 
